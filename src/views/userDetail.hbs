@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles de Modificacion</title>
+    <!-- Tailwind CSS Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.1/tailwind.min.css">
+</head>
+<body class="bg-gray-100 h-screen flex items-center justify-center">
+
+    <div class="block mx-auto my-12 bg-white p-8 w-1/3 border border-gray-200 rounded shadow-md max-w-md w-full text-center"> 
+        <h1 class="text-2xl font-bold mb-4">Detalles de Modificacion</h1>
+        <p class="mb-4">Username: {{user.username}}</p> <!-- Muestra el nombre de usuario -->
+        <p class="mb-4">Password: {{user.passwordc}}</p> <!-- Muestra la contraseña -->
+
+        <form action="/auth/users/{{user.id}}/update" method="post"> <!-- Formulario para actualizar el usuario -->
+            <label for="username" class="block mb-2">New Username:</label> <!-- Etiqueta para el nuevo nombre de usuario -->
+            <input type="text" name="username" id="username" required class="w-full p-2 border rounded mb-4"> <!-- Campo de entrada para el nuevo nombre de usuario -->
+
+            <label for="passwordc" class="block mb-2">New Password:</label> <!-- Etiqueta para la nueva contraseña -->
+            <input type="password" name="passwordc" id="passwordc" required class="w-full p-2 border rounded mb-4"> <!-- Campo de entrada para la nueva contraseña -->
+
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Update User</button> <!-- Botón para actualizar el usuario -->
+        </form>
+
+        <form action="/auth/users/{{user.id}}/delete" method="get"> <!-- Formulario para eliminar el usuario -->
+            <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700 mt-4">Delete User</button> <!-- Botón para eliminar el usuario -->
+        </form>
+    </div>
+
+</body>
+</html>

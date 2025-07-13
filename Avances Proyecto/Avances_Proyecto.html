@@ -1,0 +1,395 @@
+<!DOCTYPE html> <!-- Declaración del tipo de documento, indicando que se trata de un documento HTML5 -->
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]--> <!-- Comentario condicional para Internet Explorer 8 -->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]--> <!-- Comentario condicional para Internet Explorer 9 -->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!-- Comentario condicional para otros navegadores (no IE) y versiones superiores de IE -->
+<!--<![endif]-->
+<!-- El código crea una sección de encabezado para un sitio web. Incluye un logotipo, un menú de
+navegación y un botón para alternar menú. El menú de navegación contiene enlaces a diferentes
+secciones del sitio web, como "Inicio", "Acerca de mí", "Exp", "Habilidades Clave", "Proyectos
+Destacados" y "Contacto". -->
+<head>
+<!--- basic page needs
+================================================== -->
+    <meta charset="utf-8"> <!-- Configura el juego de caracteres del documento como UTF-8, que es ampliamente utilizado y admite caracteres especiales. -->
+	<title>Transportador De Objetos</title> <!-- Define el título de la página que se mostrará en la pestaña del navegador. -->
+	<meta name="description" content=""> <!-- Proporciona una descripción de la página web, que puede ser utilizada por motores de búsqueda y redes sociales. -->
+	<meta name="author" content=""> <!-- Especifica el autor de la página web. Puede dejarse en blanco si no se proporciona información del autor. -->
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> <!-- Configura metadatos específicos para dispositivos móviles, como la escala inicial y máxima para la visualización en dispositivos móviles. Esto garantiza una experiencia adecuada en pantallas pequeñas. -->
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="../public/css/base.css">  <!-- Enlace a una hoja de estilos llamada "base.css" para estilizar la página. -->
+   <link rel="stylesheet" href="../public/css/main.css">  <!-- Enlace a una hoja de estilos llamada "main.css" para estilizar la página. -->
+   <link rel="stylesheet" href="../public/css/vendor.css">  <!-- Enlace a una hoja de estilos llamada "vendor.css" que puede contener estilos de terceros. -->
+   <!-- script
+   ================================================== -->
+	<script src="../public/js/modernizr.js"></script> <!-- Incluye el archivo JavaScript "modernizr.js" en la página. Este archivo se utiliza para detectar las capacidades del navegador y mejorar la compatibilidad. -->
+   <!-- favicons
+	================================================== -->
+	<link rel="icon" type="image/png" href="../favicon.ico"> <!-- Establece el ícono de favoritos (favicon) de la página web. El archivo "favicon.ico" se utiliza como ícono que se mostrará en la pestaña del navegador. -->
+</head>
+<body id="top">
+
+<!-- header 
+================================================== -->
+<!-- Crea una sección de encabezado para una página web. Incluye un logotipo, un menú
+de navegación principal y un menú de alternancia para dispositivos móviles. El encabezado contiene
+un contenedor de filas y varios elementos div con clases e identificadores para estilo y
+funcionalidad. El menú de navegación principal es una lista de enlaces que navegan a diferentes
+secciones de la página web mediante un desplazamiento suave. El último enlace es para la sección de
+contacto. -->
+   <header> <!-- Inicio de la sección de encabezado de la página. -->
+    <div class="row"> <!-- Contenedor con la clase "row" que puede ser parte de un sistema de grillas para la maquetación. -->
+        <div class="logo"> <!-- Div con la clase "logo" que contiene el logotipo de la página. -->
+            <a href="../index.html">CSGA</a> <!-- Enlace que dirige a la página de inicio (index.html) con el texto "CSGA". -->
+        </div>
+        <nav id="main-nav-wrap"> <!-- Navegación principal con el identificador "main-nav-wrap". -->
+            <ul class="main-navigation"> <!-- Lista no ordenada con la clase "main-navigation" que contiene elementos de navegación. -->
+                <li class="current"> <!-- Elemento de lista actualmente seleccionado (resaltado) con la clase "current". -->
+                    <a class="smoothscroll" href="#intro" title="">Inicio</a> <!-- Enlace con la clase "smoothscroll" que desplaza suavemente a la sección "intro" y muestra el texto "Inicio". --></li>
+                <li> <!-- Otro elemento de lista similar para navegar a una sección diferente. -->
+                    <a class="smoothscroll" href="#process" title="">De que trata?</a></li>
+                <li> <!-- Más elementos de lista similares para otras secciones. -->
+                    <a class="smoothscroll" href="#features" title="">Funcionamiento</a></li>
+                <li>
+                    <a class="smoothscroll" href="#pricing" title="">APLICACIONES</a></li>
+				<li>
+                    <a class="smoothscroll" href="#faq" title="">Concluciones</a></li>
+                <li class="highlight with-sep"> <!-- Elemento de navegación resaltado con una clase "highlight" y un separador ("with-sep"). -->
+                    <a href="http://localhost:5000/auth/register" title="">Inicio/registro</a> <!-- Enlace para la sección de contacto. --></li>
+            </ul>
+        </nav>
+        <a class="menu-toggle" href="#"><span>Menu</span></a> <!-- Enlace con la clase "menu-toggle" para mostrar u ocultar el menú de navegación en dispositivos móviles. -->
+    </div>
+   </header> <!-- Fin de la sección de encabezado. -->
+
+<!-- intro section
+================================================== -->
+<!-- Crea una sección introductoria para una página web. Incluye un fondo de video, un
+botón para alternar sonido y algo de contenido de texto. El vídeo está configurado para reproducción
+automática, bucle y silenciado. La sección también incluye una superposición de sombras y un botón
+para obtener más información. -->
+<section id="intro"> <!-- Inicio de la sección de introducción de la página con un identificador "intro". -->
+    <video id="video-background" controls autoplay loop muted>
+        <source src="../public/images/rboto.mp4" type="video/mp4"> <!-- Fuente de video en formato MP4. -->
+        Tu navegador no admite la reproducción de videos. <!-- Mensaje de respaldo si el navegador no admite la reproducción de videos. --></video>
+    <button id="sound-toggle" class="sound-off"></button> <!-- Botón de alternar sonido con una clase "sound-off". -->
+    <div class="shadow-overlay"></div> <!-- Capa de sombra superpuesta. -->
+    <div class="intro-content"> <!-- Contenido de introducción. -->
+        <div class="row"> <!-- Contenedor con la clase "row". -->
+            <div class="col-twelve"> <!-- Columna con la clase "col-twelve". -->
+                <h5>Bienvenidos Al Proyecto Transportador De Objetos .</h5> <!-- Título de nivel 5. -->
+                <h1>Te aseguro que te gustara</h1> <!-- Título principal. -->
+                <a class="button stroke smoothscroll" href="#process" title="">Saber mas</a> <!-- Enlace con una clase "button stroke" y efecto de desplazamiento suave. -->
+            </div>
+        </div>
+    </div>
+</section> <!-- Fin de la sección de introducción. -->
+
+<!-- Process Section
+================================================== -->
+<!-- Crea una sección en una página web que proporciona información sobre el
+desarrollador. Incluye una breve introducción, seguida de una lista de ventajas de tener al
+desarrollador como programador. Las ventajas mencionadas incluyen habilidades de resolución de
+problemas, desarrollo de software personalizado, automatización de tareas y actualizaciones
+tecnológicas continuas. El código también incluye algunos elementos de estilo y diseño para mostrar
+el contenido de una manera visualmente atractiva. -->
+<section id="process"> <!-- Sección "Acerca de mí" -->
+	<div class="row section-intro"> <!-- Contenedor de introducción -->
+	  <div class="col-twelve with-bottom-line"> <!-- Columna con una línea inferior -->
+		<h5>Transportador De Objetos</h5> <!-- Encabezado de nivel 5 -->
+		<h1>De Que Trata?</h1> <!-- Título principal -->
+		<p class="lead">El robot de transporte es un dispositivo autónomo diseñado para facilitar la transportación de objetos de un lugar a otro de manera eficiente y segura. Este robot está equipado con una serie de sensores, motores y un sistema de comunicación que le permite recibir instrucciones desde una aplicación Python. Su estructura y movilidad están diseñadas para adaptarse a una variedad de entornos, desde interiores hasta exteriores.</p>
+		<br> 
+		<p class="lead">El robot cuenta con un compartimento de carga que puede acomodar una variedad de objetos, y su capacidad de carga es ajustable según las necesidades de los usuarios. Utiliza sensores para detectar obstáculos en su camino y puede navegar alrededor de ellos de manera autónoma. Su sistema de comunicación bidireccional permite a los usuarios enviar instrucciones precisas y recibir actualizaciones en tiempo real sobre el estado de la entrega.</p>
+		<br>
+		<h1>Propósito del Robot de Transporte</h1> <!-- Título principal -->
+		<p class="lead">El propósito principal del robot de transporte es ofrecer una solución eficiente y conveniente para la distribución de objetos en diferentes entornos. Algunos de los propósitos y aplicaciones clave incluyen.</p>
+	  </div>
+	</div>
+	<div class="row process-content"> <!-- Contenido principal de "Acerca de mí" -->
+	  <div class="left-side"> <!-- Lado izquierdo -->
+		<div class="item" data-item="1"> <!-- Elemento 1 -->
+		<h5>Entregas a corta distancia</h5> <!-- Título de ventaja 1 -->
+		  <p>El robot puede utilizarse para llevar objetos desde un punto de recogida a un punto de entrega cercano, lo que es especialmente útil en entornos como oficinas, almacenes, o incluso hogares.</p> <!-- Descripción de ventaja 1 -->
+		</div>
+		<div class="item" data-item="2"> <!-- Elemento 2 -->
+		  <h5>Automatización de la logística</h5> <!-- Título de ventaja 2 -->
+		  <p>Las empresas pueden emplear este robot para agilizar sus procesos de logística interna, reduciendo los tiempos de espera y mejorando la eficiencia.</p> <!-- Descripción de ventaja 2 -->
+		</div>
+	  </div> <!-- /left-side -->
+	  <div class="right-side"> <!-- Lado derecho -->
+		<div class="item" data-item="3"> <!-- Elemento 3 -->
+		  <h5>Asistencia personalizada</h5> <!-- Título de ventaja 3 -->
+		  <p>En hogares o entornos de atención médica, el robot puede ayudar en la entrega de suministros o medicamentos a personas que lo necesitan.</p> <!-- Descripción de ventaja 3 -->
+		</div>
+		<div class="item" data-item="4"> <!-- Elemento 4 -->
+		  <h5>Minimizar la interacción humana</h5> <!-- Título de ventaja 4 -->
+		  <p>En situaciones en las que se busca reducir la interacción humana, como durante pandemias, el robot puede proporcionar un medio de entrega seguro y sin contacto.</p> <!-- Descripción de ventaja 4 -->
+		</div>
+	  </div> <!-- /right-side -->
+	  <div class="image-part"></div> <!-- Posible espacio para una imagen u otro contenido visual -->
+	</div> <!-- /process-content -->
+</section> <!-- /process -->
+
+<!-- features Section
+================================================== -->
+<!-- El código anterior crea una sección con la identificación "características" que contiene información
+sobre la experiencia laboral del autor como programador. Incluye un encabezado, un párrafo que
+describe la experiencia del autor en varios lenguajes de programación y una lista de características
+con íconos que representan diferentes lenguajes de programación (JavaScript, CSS, HTML, C++, Python
+y Java) y descripciones de la experiencia y habilidades del autor en cada idioma. -->
+<section id="features"> <!-- Sección "Experiencia Laboral" -->
+	<div class="row section-intro"> <!-- Contenedor de introducción -->
+	  <div class="col-twelve with-bottom-line"> <!-- Columna con una línea inferior -->
+		<h5>Funcionamiento</h5> <!-- Encabezado de nivel 5 -->
+		<h1>Funcionamiento del Robot de Transporte</h1> <!-- Título principal -->
+		<p class="lead">El robot de transporte es un dispositivo autónomo que se basa en una combinación de hardware y software para llevar a cabo sus tareas. Su funcionamiento se puede describir de la siguiente manera:</p>
+		<!-- Descripción de la experiencia laboral -->
+	  </div>
+	</div>
+  
+	<div class="row features-content"> <!-- Contenido principal de "Experiencia Laboral" -->
+	  <div class="features-list block-1-3 block-s-1-2 block-tab-full group"> <!-- Lista de características y habilidades -->
+		<div class="bgrid feature"> <!-- Característica 1 -->
+		  <span class="icon"><i class="icon-file-text"></i></span> <!-- Icono de JavaScript -->
+		  <div class="service-content"> <!-- Contenido del servicio 1 -->
+			<h3 class="h05">Recepción de instrucciones</h3> <!-- Título de habilidad 1: JavaScript -->
+			<p>Los usuarios interactúan con una aplicación Python específicamente diseñada para el robot. En esta aplicación, los usuarios ingresan información como la distancia a la que desean que el robot recoja los objetos, el punto de entrega, la cantidad de peso y el peso máximo que puede llevar.</p> <!-- Descripción de habilidad 1 -->
+		  </div>
+		</div> <!-- /bgrid -->
+  
+		<div class="bgrid feature"> <!-- Característica 2 -->
+		  <span class="icon"><i class="icon-folder-download"></i></span> <!-- Icono de CSS -->
+		  <div class="service-content"> <!-- Contenido del servicio 2 -->
+			<h3 class="h05">Procesamiento de instrucciones</h3> <!-- Título de habilidad 2: CSS -->
+			<p>La aplicación procesa las instrucciones del usuario y las envía al robot a través de una conexión inalámbrica. El robot recibe y decodifica estas instrucciones.</p> <!-- Descripción de habilidad 2 -->
+		  </div>
+		</div> <!-- /bgrid -->
+  
+		<div class="bgrid feature"> <!-- Característica 3 -->
+		  <span class="icon"><i class="icon-location2"></i></span> <!-- Icono de HTML -->
+		  <div class="service-content"> <!-- Contenido del servicio 3 -->
+			<h3 class="h05">Movilidad y navegación</h3> <!-- Título de habilidad 3: HTML -->
+			<p>El robot utiliza sensores integrados, como ultrasonidos, infrarrojos o cámaras, para detectar obstáculos en su entorno. Utiliza esta información para planificar su ruta y evitar colisiones mientras se desplaza hacia el punto de recogida.</p> <!-- Descripción de habilidad 3 -->
+		  </div>
+		</div> <!-- /bgrid -->
+  
+		<div class="bgrid feature"> <!-- Característica 4 -->
+		  <span class="icon"><i class="icon-download"></i></span> <!-- Icono de C++ -->
+		  <div class="service-content"> <!-- Contenido del servicio 4 -->
+			<h3 class="h05">Recogida de objetos</h3> <!-- Título de habilidad 4: C++ -->
+			<p>Una vez que llega al punto de recogida, el robot recoge los objetos de acuerdo con las especificaciones proporcionadas por el usuario. Puede cargar varios objetos en su compartimento de carga.</p> <!-- Descripción de habilidad 4 -->
+		  </div>
+		</div> <!-- /bgrid -->
+  
+		<div class="bgrid feature"> <!-- Característica 5 -->
+		  <span class="icon"><i class="icon-location"></i></span> <!-- Icono de Python -->
+		  <div class= "service-content"> <!-- Contenido del servicio 5 -->
+			<h3 class="h05">Navegación al punto de entrega</h3> <!-- Título de habilidad 5: Python -->
+			<p>El robot calcula la ruta más eficiente para llegar al punto de entrega, nuevamente evitando obstáculos en el camino.</p> <!-- Descripción de habilidad 5 -->
+		  </div>
+		</div> <!-- /bgrid -->
+  
+		<div class="bgrid feature"> <!-- Característica 6 -->
+		  <span class="icon"><i class="icon-upload"></i></span> <!-- Icono de Java -->
+		  <div class="service-content"> <!-- Contenido del servicio 6 -->
+			<h3 class="h05">Entrega de objetos</h3> <!-- Título de habilidad 6: Java -->
+			<p>En el punto de entrega, el robot descarga los objetos de manera segura y completa la entrega.</p> <!-- Descripción de habilidad 6 -->
+		  </div>
+		</div> <!-- /bgrid -->
+	  </div> <!-- /features-list -->
+	</div> <!-- /features-content -->
+</section> <!-- /features -->
+
+<!-- pricing
+================================================== -->
+<!-- El código anterior crea una sección llamada "Habilidades Clave" con un título y un párrafo de
+introducción. Luego crea cuatro bloques de precios, cada uno de los cuales representa una habilidad
+clave de un programador. Cada bloque incluye un título y un icono que representa la habilidad. Las
+habilidades mencionadas son "Comunicación Efectiva", "Conocimiento de Bases de Datos", "Desarrollo
+Web y Frontend" y "Mantenimiento de Código y Depuración". Depuración -->
+<section id="pricing"> <!-- Sección de "Habilidades Clave" -->
+	<div class="row section-intro"> <!-- Contenedor de introducción -->
+	  <div class="col-twelve with-bottom-line"> <!-- Columna con una línea inferior -->
+		<h5>Aplicaciones</h5> <!-- Encabezado de nivel 5 -->
+		<h1>Aplicación del Robot de Transporte</h1> <!-- Título principal -->
+		<p class="lead"></p> <!-- Párrafo de introducción -->
+	  </div>
+	</div>
+	<div class="row pricing-content"> <!-- Contenido principal de "Habilidades Clave" -->
+	  <div class="pricing-tables block-1-4 group"> <!-- Tablas de precios (grupos de 4) -->
+		<div class="bgrid"> <!-- Bloque de precio 1 -->
+		  <div class="price-block">
+			<div class="top-part">
+			  <h3 class="plan-title">Entrega de suministros en oficinas y almacenes</h3> <!-- Título de la habilidad 1 -->
+			  <p>El robot puede llevar documentos, materiales de oficina, productos o suministros de un lugar a otro dentro de un edificio o un almacén.</p>
+			  <span class="icon"><i class="icon-truck"></i></span> <!-- Icono de "usuarios" -->
+			</div>
+		  </div>
+		</div> <!-- /price-block -->
+		<div class="bgrid"> <!-- Bloque de precio 2 -->
+		  <div class="price-block">
+			<div class="top-part">
+			  <h3 class="plan-title">Servicio de habitaciones en hoteles</h3> <!-- Título de la habilidad 2 -->
+			  <p>En el sector hotelero, el robot puede entregar alimentos, bebidas u otros servicios de habitaciones a los huéspedes.
+			  </p>
+			  <span class="icon"><i class="icon-bed"></i></span> <!-- Icono de "base de datos" -->
+			</div>
+		  </div>
+		</div> <!-- /price-block -->
+		<div class="bgrid"> <!-- Bloque de precio 3 -->
+		  <div class="price-block">
+			<div class="top-part">
+			  <h3 class="plan-title">Asistencia médica en hospitales</h3> <!-- Título de la habilidad 3 -->
+			  <p>En hospitales y centros de atención médica, el robot puede entregar medicamentos o suministros a pacientes o personal médico.</p>
+			  <span class="icon"><i class="icon-aid-kit"></i></span> <!-- Icono de "pantalla" -->
+			</div>
+		  </div>
+		</div> <!-- /price-block -->
+		<div class="bgrid"> <!-- Bloque de precio 4 -->
+		  <div class="price-block">
+			<div class="top-part">
+			  <h3 class="plan-title">Automatización de procesos industriales</h3> <!-- Título de la habilidad 4 -->
+			  <p>Las fábricas y almacenes pueden utilizar el robot para automatizar la distribución de componentes o productos.</p>
+			  <span class="icon"><i class="icon-industry"></i></span> <!-- Icono de "incrustar" -->
+			</div>
+		  </div>
+		</div> <!-- /price-block -->
+	  </div> <!-- /pricing-tables -->
+	</div> <!-- /pricing-content -->
+</section> <!-- /pricing -->
+
+<!-- faq
+================================================== -->
+<!-- Crea una sección en una página web que muestra una lista de proyectos que el
+autor ha completado. Cada proyecto está representado por un bloque que incluye un título, una
+descripción y un icono. Los proyectos van desde un robot transportador hasta una aplicación de
+reconocimiento facial. El código también incluye algunos elementos de estilo y diseño para que la
+sección sea visualmente atractiva. -->
+<section id="faq"> <!-- Sección de "Mis Proyectos Realizados" -->
+	<div class="row section-intro"> <!-- Contenedor de introducción -->
+	  <div class="col-twelve with-bottom-line"> <!-- Columna con una línea inferior -->
+		<h5>Concluciones</h5> <!-- Encabezado de nivel 5 -->
+		<h1>Conclusiones del Robot de Transporte</h1> <!-- Título principal -->
+		
+	  </div>
+	</div>
+	<div class="row faq-content"> <!-- Contenido principal de "Mis Proyectos Realizados" -->
+	  <div class="q-and-a block-1-2 block-tab-full group"> <!-- Bloques de preguntas y respuestas (grupo de 2) -->
+		<div class="bgrid"> <!-- Bloque 1 -->
+		  <h3>Eficiencia en la Distribución</h3> <!-- Título del proyecto 1 -->
+		  <p>El robot de transporte ha demostrado ser una solución eficiente para la distribución de objetos en diversos entornos. Su capacidad para moverse de manera autónoma y evitar obstáculos ha mejorado significativamente la velocidad y la precisión de las entregas.</p> <!-- Descripción del proyecto 1 -->
+		  
+		  </a>
+		</div>
+		<div class="bgrid"> <!-- Bloque 2 -->
+		  <h3>Automatización de Procesos</h3> <!-- Título del proyecto 2 -->
+		  <p>La capacidad del robot para funcionar de manera autónoma ha permitido la automatización de procesos logísticos en diversas industrias. Esto ha llevado a una reducción de los tiempos de espera y a una mayor eficiencia en la gestión de la carga y la distribución.</p> <!-- Descripción del proyecto 2 -->
+		  
+		</div>
+		<div class="bgrid"> <!-- Bloque 3 -->
+			<h3>Seguridad y Confiabilidad</h3><!-- Título del proyecto 3 -->
+			<p>Se han implementado medidas de seguridad efectivas en el robot para prevenir colisiones y garantizar un funcionamiento seguro en entornos con personas. Las pruebas exhaustivas han demostrado la confiabilidad del robot en una variedad de situaciones.</p> <!-- Descripción del proyecto 3 -->
+			
+		</div>
+		<div class="bgrid"> <!-- Bloque 4 -->
+			<h3>Versatilidad de Aplicación</h3><!-- Título del proyecto 4 -->
+			<p>El robot ha encontrado aplicaciones en una amplia gama de entornos, desde oficinas y almacenes hasta hospitales y hoteles. Su versatilidad lo hace adecuado para satisfacer diversas necesidades de distribución y entrega.</p> <!-- Descripción del proyecto 4 -->
+		 
+		</div>
+		<div class="bgrid"> <!-- Bloque 5 -->
+			<h3>Reducción de Interacción Humana</h3><!-- Título del proyecto 5 -->
+			<p>En situaciones donde se busca minimizar la interacción humana, como durante una pandemia, el robot ha demostrado ser una herramienta valiosa al proporcionar entregas sin contacto.</p> <!-- Descripción del proyecto 5 -->
+		 
+		</div>
+		<div class="bgrid"> <!-- Bloque 6 -->
+			<h3>Plataforma de Desarrollo</h3><!-- Título del proyecto 6 -->
+			<p>El proyecto ha servido como una plataforma de desarrollo para la investigación y experimentación en el campo de la robótica y la automatización. Ha impulsado el interés en la exploración de tecnologías avanzadas.</p> <!-- Descripción del proyecto 6 -->
+			
+		</div>
+	</div> <!-- /q-and-a --> 
+</div> <!-- /faq-content --> 
+</section> <!-- /faq  -->
+<!-- footer
+================================================== -->
+<!-- Crea una sección de pie de página para un sitio web. Incluye varios elementos
+como un logotipo, un mensaje de agradecimiento, enlaces a sitios, enlaces sociales, un formulario de
+suscripción y un botón para volver al principio. El pie de página se divide en dos secciones: el pie
+de página principal y el pie de página inferior. El pie de página principal contiene el contenido
+principal del pie de página, mientras que el pie de página inferior contiene el botón de volver al
+principio. -->
+   <footer>
+	<div class="footer-main">
+	   <div class="row">
+		  <div class="col-four tab-full mob-full footer-info">
+			 <div class="footer-logo"></div> <!-- Logo del pie de página -->
+			 <p>
+				Gracias Por Ver <!-- Mensaje de agradecimiento -->
+			 </p>
+		  </div> <!-- /footer-info -->
+		  <div class="col-two tab-1-3 mob-1-2 site-links">
+			 <h4>Site Links</h4> <!-- Título de enlaces del sitio -->
+			 <ul>
+				<li class="current"><a class="smoothscroll"  href="#intro" title="">Inicio</a></li> <!-- Enlace a la sección "Inicio" -->
+				<li><a class ="smoothscroll" href="#process" title="">De que trata?</a></li> <!-- Enlace a la sección "Acerca de mí" -->
+				<li><a class ="smoothscroll" href="#features" title="">Funcionamiento</a></li> <!-- Enlace a la sección "Experiencia Laboral" -->
+				<li><a class ="smoothscroll" href="#pricing" title="">Aplicaciones</a></li> <!-- Enlace a la sección "Habilidades Clave" -->
+				<li><a class ="smoothscroll" href="#faq" title="">Concluciones</a></li> <!-- Enlace a la sección "Proyectos Destacados" -->
+			 </ul>
+		  </div> <!-- /site-links -->
+		  <div class="col-two tab-1-3 mob-1-2 social-links">
+			 <h4>Social</h4> <!-- Título de enlaces sociales -->
+			 <ul>
+				<li><a href="#">Twitter</a></li> <!-- Enlace a Twitter -->
+				<li><a href="#">Facebook</a></li> <!-- Enlace a Facebook -->
+				<li><a href="#">Github</a></li> <!-- Enlace a Github -->
+				<li><a href="#">Discord</a></li> <!-- Enlace a Discord -->
+			 </ul>
+		  </div> <!-- /social -->
+		  <div class="col-four tab-1-3 mob-full footer-subscribe">
+			 <h4>Subscribe</h4> <!-- Título de suscripción -->
+			 <p>Manténgase actualizado. Suscríbete aquí.</p> <!-- Mensaje de suscripción -->
+			 <div class="subscribe-form">
+				<form id="mc-form" class="group" novalidate="true">
+				   <input type="email" value="" name="dEmail" class="email" id="mc-email" placeholder="type email &amp; hit enter" required=""> <!-- Campo de entrada de correo electrónico -->
+				   <input type="submit" name="subscribe"> <!-- Botón de suscripción -->
+				   <label for="mc-email" class="subscribe-message"></label> <!-- Etiqueta de mensaje de suscripción -->
+				</form>
+			 </div>
+		  </div> <!-- /subscribe -->
+	   </div> <!-- /row -->
+	</div> <!-- /footer-main -->
+	<div class="footer-bottom">
+	   <div class="row">
+		  <div class="col-twelve">
+			 <div id="go-top" style="display: block;"> <!-- Enlace para regresar arriba -->
+				<a class="smoothscroll" title="Back to Top" href="#top"><i class="icon ion-android-arrow-up"></i></a>
+			 </div>
+		  </div>
+	   </div> <!-- /footer-bottom -->
+	</div>
+ </footer>
+   
+<!-- Crea un elemento de precargador en HTML. El precargador es un indicador visual
+que se muestra mientras se carga el contenido de una página web. Ayuda a proporcionar información al
+usuario de que la página aún se está cargando y evita que vea contenido incompleto o roto. El código
+crea un elemento div con el id "precargador" y un elemento div secundario con el id "cargador" que
+representa la animación de carga real. -->
+  <div id="preloader">
+    <div id="loader"></div> <!-- Elemento de precarga -->
+  </div>
+
+<!-- JavaScript
+================================================== -->
+<!-- incluye varios archivos JavaScript en un documento HTML. -->
+<script src="../public/js/jquery-1.11.3.min.js"></script> <!-- Incluye la biblioteca jQuery -->
+<script src="../public/js/jquery-migrate-1.2.1.min.js"></script> <!-- Incluye una extensión de jQuery para migración -->
+<script src="../public/js/plugins.js"></script> <!-- Incluye archivos de complementos o plugins JavaScript -->
+<script src="../public/js/main.js"></script> <!-- Incluye el archivo principal de JavaScript de la página -->
+
+
+</body>
+
+</html>

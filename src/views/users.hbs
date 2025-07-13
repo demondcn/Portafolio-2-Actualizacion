@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Registros</title>
+    <!-- Agrega tus enlaces a Tailwind CSS y otros estilos aquí -->
+</head>
+
+<body>
+    <div class="container mx-auto my-12">
+        <!-- Lista de usuarios -->
+        <div class="bg-white w-1/3 border border-gray-200 rounded-lg shadow-lg text-gray-800 mx-auto p-8 mb-8">
+            <h1 class="text-3xl font-bold text-center mb-6">Lista de usuarios</h1>
+            {{#if users}}
+                <!-- Si hay usuarios registrados -->
+                <table class="table text-center w-full">
+                    <thead>
+                        <tr class="bg-gray-800 text-white">
+                            <th class="py-2">Nombre de usuario</th>
+                            <th class="py-2">Contraseña</th>
+                            <th class="py-2">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each users}}
+                            <!-- Por cada usuario -->
+                            <tr>
+                                <td>{{username}}</td>
+                                <td>{{passwordc}}</td>
+                                <td>
+                                    <div class="flex justify-center space-x-2">
+                                        <!-- Enlace para editar el usuario -->
+                                        <a href="/auth/users/{{id}}" class="btn btn-warning py-2 px-4">
+                                            Editar
+                                        </a>
+                                        <!-- Enlace para eliminar el usuario -->
+                                        <a href="/auth/users/{{id}}/delete" class="btn btn-danger py-2 px-4">
+                                            Eliminar
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        {{/each}}
+                    </tbody>
+                    <tfoot>
+                        <tr class="bg-gray-800 text-white">
+                            <td colspan="3">REGISTRO DE USUARIOS</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            {{else}}
+                <!-- Si no hay usuarios registrados -->
+                <div class="card text-center mx-auto" style="width: 350px;">
+                    <div class="card-header bg-gray-800 text-white">
+                        <h3 class="text-xl">No hay usuarios registrados</h3>
+                    </div>
+                    <div class="card-body">
+                        <p style="color: red;">Puedes crear un nuevo usuario presionando el siguiente botón:</p>
+                        <!-- Enlace para crear un nuevo usuario -->
+                        <a href="/auth/register" class="btn btn-primary mt-3 bg-blue-500 hover:bg-blue-700">Ir a
+                            crear usuario</a>
+                    </div>
+                </div>
+            {{/if}}
+        </div>
+
+        <!-- Lista de trabajadores -->
+        <div class="bg-white w-1/3 border border-gray-200 rounded-lg shadow-lg text-gray-800 mx-auto p-8 mb-8">
+            <h1 class="text-3xl font-bold text-center mb-6">Lista de trabajadores</h1>
+            {{#if trabajadores}}
+                <!-- Si hay trabajadores registrados -->
+                <table class="table text-center w-full">
+                    <thead>
+                        <tr class="bg-gray-800 text-white">
+                            <th class="py-2">Nombre de usuario</th>
+                            <th class="py-2">Cargo</th>
+                            <th class="py-2">Área de trabajo</th>
+                            <th class="py-2">Años trabajando</th>
+                            <th class="py-2">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each trabajadores}}
+                            <!-- Por cada trabajador -->
+                            <tr>
+                                <td>{{username}}</td>
+                                <td>{{cargo}}</td>
+                                <td>{{areatrabajo}}</td>
+                                <td>{{añostrabajando}}</td>
+                                <td>
+                                    <div class="flex justify-center space-x-2">
+                                        <!-- Enlace para editar el trabajador -->
+                                        <a href="/auth/trabajadores/{{id}}" class="btn btn-warning py-2 px-4">
+                                            Editar
+                                        </a>
+                                        <!-- Enlace para eliminar el trabajador -->
+                                        <a href="/auth/trabajadores/{{id}}/delete" class="btn btn-danger py-2 px-4">
+                                            Eliminar
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        {{/each}}
+                    </tbody>
+                    <tfoot>
+                        <tr class="bg-gray-800 text-white">
+                            <td colspan="5">REGISTRO DE TRABAJADORES</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            {{else}}
+                <!-- Si no hay trabajadores registrados -->
+                <div class="card text-center mx-auto" style="width: 350px;">
+                    <!-- ... (Código actual de trabajadores no registrados) ... -->
+                </div>
+            {{/if}}
+        </div>
+
+        <!-- Lista de productos -->
+        <div class="bg-white w-1/3 border border-gray-200 rounded-lg shadow-lg text-gray-800 mx-auto p-8">
+            <h1 class="text-3xl font-bold text-center mb-6">Lista de productos</h1>
+            {{#if productos}}
+                <!-- Si hay productos registrados -->
+                <table class="table text-center w-full">
+                    <thead>
+                        <tr class="bg-gray-800 text-white">
+                            <th class="py-2">Nombre del producto</th>
+                            <th class="py-2">Cantidad</th>
+                            <th class="py-2">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each productos}}
+                            <!-- Por cada producto -->
+                            <tr>
+                                <td>{{nombreproducto}}</td>
+                                <td>{{cantidad}}</td>
+                                <td>
+                                    <div class="flex justify-center space-x-2">
+                                        <!-- Enlace para editar el producto -->
+                                        <a href="/auth/productos/{{id}}" class="btn btn-warning py-2 px-4">
+                                            Editar
+                                        </a>
+                                        <!-- Enlace para eliminar el producto -->
+                                        <a href="/auth/productos/{{id}}/delete" class="btn btn-danger py-2 px-4">
+                                            Eliminar
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        {{/each}}
+                    </tbody>
+                    <tfoot>
+                        <tr class="bg-gray-800 text-white">
+                            <td colspan="3">REGISTRO DE PRODUCTOS</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            {{else}}
+                <!-- Si no hay productos registrados -->
+                <div class="card text-center mx-auto" style="width: 350px;">
+                    <!-- ... (Código actual de productos no registrados) ... -->
+                </div>
+            {{/if}}
+        </div>
+    </div>
+    <!-- Agrega tus scripts o enlaces a scripts aquí -->
+</body>
+
+</html>

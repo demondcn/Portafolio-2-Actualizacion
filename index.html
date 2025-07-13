@@ -1,0 +1,388 @@
+<!DOCTYPE html> <!-- Declaración del tipo de documento, indicando que se trata de un documento HTML5 -->
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]--> <!-- Comentario condicional para Internet Explorer 8 -->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]--> <!-- Comentario condicional para Internet Explorer 9 -->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!-- Comentario condicional para otros navegadores (no IE) y versiones superiores de IE -->
+<!--<![endif]-->
+<!-- El código crea una sección de encabezado para un sitio web. Incluye un logotipo, un menú de
+navegación y un botón para alternar menú. El menú de navegación contiene enlaces a diferentes
+secciones del sitio web, como "Inicio", "Acerca de mí", "Exp", "Habilidades Clave", "Proyectos
+Destacados" y "Contacto". -->
+<head>
+<!--- basic page needs
+================================================== -->
+    <meta charset="utf-8"> <!-- Configura el juego de caracteres del documento como UTF-8, que es ampliamente utilizado y admite caracteres especiales. -->
+	<title>CSGA</title> <!-- Define el título de la página que se mostrará en la pestaña del navegador. -->
+	<meta name="description" content=""> <!-- Proporciona una descripción de la página web, que puede ser utilizada por motores de búsqueda y redes sociales. -->
+	<meta name="author" content=""> <!-- Especifica el autor de la página web. Puede dejarse en blanco si no se proporciona información del autor. -->
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> <!-- Configura metadatos específicos para dispositivos móviles, como la escala inicial y máxima para la visualización en dispositivos móviles. Esto garantiza una experiencia adecuada en pantallas pequeñas. -->
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="public/css/base.css">  <!-- Enlace a una hoja de estilos llamada "base.css" para estilizar la página. -->
+   <link rel="stylesheet" href="public/css/main.css">  <!-- Enlace a una hoja de estilos llamada "main.css" para estilizar la página. -->
+   <link rel="stylesheet" href="public/css/vendor.css">  <!-- Enlace a una hoja de estilos llamada "vendor.css" que puede contener estilos de terceros. -->
+   <!-- script
+   ================================================== -->
+	<script src="public/js/modernizr.js"></script> <!-- Incluye el archivo JavaScript "modernizr.js" en la página. Este archivo se utiliza para detectar las capacidades del navegador y mejorar la compatibilidad. -->
+   <!-- favicons
+	================================================== -->
+	<link rel="icon" type="image/png" href="favicon.ico"> <!-- Establece el ícono de favoritos (favicon) de la página web. El archivo "favicon.ico" se utiliza como ícono que se mostrará en la pestaña del navegador. -->
+</head>
+<body id="top">
+
+<!-- header 
+================================================== -->
+<!-- Crea una sección de encabezado para una página web. Incluye un logotipo, un menú
+de navegación principal y un menú de alternancia para dispositivos móviles. El encabezado contiene
+un contenedor de filas y varios elementos div con clases e identificadores para estilo y
+funcionalidad. El menú de navegación principal es una lista de enlaces que navegan a diferentes
+secciones de la página web mediante un desplazamiento suave. El último enlace es para la sección de
+contacto. -->
+   <header> <!-- Inicio de la sección de encabezado de la página. -->
+    <div class="row"> <!-- Contenedor con la clase "row" que puede ser parte de un sistema de grillas para la maquetación. -->
+        <div class="logo"> <!-- Div con la clase "logo" que contiene el logotipo de la página. -->
+            <a href="index.html">CSGA</a> <!-- Enlace que dirige a la página de inicio (index.html) con el texto "CSGA". -->
+        </div>
+        <nav id="main-nav-wrap"> <!-- Navegación principal con el identificador "main-nav-wrap". -->
+            <ul class="main-navigation"> <!-- Lista no ordenada con la clase "main-navigation" que contiene elementos de navegación. -->
+                <li class="current"> <!-- Elemento de lista actualmente seleccionado (resaltado) con la clase "current". -->
+                    <a class="smoothscroll" href="#intro" title="">Inicio</a> <!-- Enlace con la clase "smoothscroll" que desplaza suavemente a la sección "intro" y muestra el texto "Inicio". --></li>
+                <li> <!-- Otro elemento de lista similar para navegar a una sección diferente. -->
+                    <a class="smoothscroll" href="#process" title="">Acerca de mí</a></li>
+                <li> <!-- Más elementos de lista similares para otras secciones. -->
+                    <a class="smoothscroll" href="#features" title="">Exp</a></li>
+                <li>
+                    <a class="smoothscroll" href="#pricing" title="">Habilidades Clave</a></li>
+				<li>
+                    <a class="smoothscroll" href="#faq" title="">Proyectos Destacados</a></li>
+                <li class="highlight with-sep"> <!-- Elemento de navegación resaltado con una clase "highlight" y un separador ("with-sep"). -->
+                    <a href="#" title="">Contacto</a> <!-- Enlace para la sección de contacto. --></li>
+            </ul>
+        </nav>
+        <a class="menu-toggle" href="#"><span>Menu</span></a> <!-- Enlace con la clase "menu-toggle" para mostrar u ocultar el menú de navegación en dispositivos móviles. -->
+    </div>
+   </header> <!-- Fin de la sección de encabezado. -->
+
+<!-- intro section
+================================================== -->
+<!-- Crea una sección introductoria para una página web. Incluye un fondo de video, un
+botón para alternar sonido y algo de contenido de texto. El vídeo está configurado para reproducción
+automática, bucle y silenciado. La sección también incluye una superposición de sombras y un botón
+para obtener más información. -->
+<section id="intro"> <!-- Inicio de la sección de introducción de la página con un identificador "intro". -->
+    <video id="video-background" controls autoplay loop muted>
+        <source src="public/images/dayinmylife.mp4" type="video/mp4"> <!-- Fuente de video en formato MP4. -->
+        Tu navegador no admite la reproducción de videos. <!-- Mensaje de respaldo si el navegador no admite la reproducción de videos. --></video>
+    <button id="sound-toggle" class="sound-off"></button> <!-- Botón de alternar sonido con una clase "sound-off". -->
+    <div class="shadow-overlay"></div> <!-- Capa de sombra superpuesta. -->
+    <div class="intro-content"> <!-- Contenido de introducción. -->
+        <div class="row"> <!-- Contenedor con la clase "row". -->
+            <div class="col-twelve"> <!-- Columna con la clase "col-twelve". -->
+                <h5>Bienvenidos a mi portafolio.</h5> <!-- Título de nivel 5. -->
+                <h1>Te aseguro que te gustara</h1> <!-- Título principal. -->
+                <a class="button stroke smoothscroll" href="#process" title="">Saber mas</a> <!-- Enlace con una clase "button stroke" y efecto de desplazamiento suave. -->
+            </div>
+        </div>
+    </div>
+</section> <!-- Fin de la sección de introducción. -->
+
+<!-- Process Section
+================================================== -->
+<!-- Crea una sección en una página web que proporciona información sobre el
+desarrollador. Incluye una breve introducción, seguida de una lista de ventajas de tener al
+desarrollador como programador. Las ventajas mencionadas incluyen habilidades de resolución de
+problemas, desarrollo de software personalizado, automatización de tareas y actualizaciones
+tecnológicas continuas. El código también incluye algunos elementos de estilo y diseño para mostrar
+el contenido de una manera visualmente atractiva. -->
+<section id="process"> <!-- Sección "Acerca de mí" -->
+	<div class="row section-intro"> <!-- Contenedor de introducción -->
+	  <div class="col-twelve with-bottom-line"> <!-- Columna con una línea inferior -->
+		<h5>Acerca de mi</h5> <!-- Encabezado de nivel 5 -->
+		<h1>Quien Soy?</h1> <!-- Título principal -->
+		<p class="lead">¡Hola! Soy Cristian Stiven Guerrero Andrade, un apasionado por la programación y el desarrollo web. Mi amor por la tecnología me ha llevado a explorar varios lenguajes de programación y me especializo en el desarrollo web y algunas de las bases de la programación. Con un enfoque en C++, C, Java, JavaScript, Python, HTML y CSS, estoy dispuesto a afrontar cualquier desafío de codificación que se me presente. A continuación, te presentaré las siguientes ventajas de tenerme como desarrollador.</p>
+	  </div>
+	</div>
+	<div class="row process-content"> <!-- Contenido principal de "Acerca de mí" -->
+	  <div class="left-side"> <!-- Lado izquierdo -->
+		<div class="item" data-item="1"> <!-- Elemento 1 -->
+		  <h5>Resolución de Problemas</h5> <!-- Título de ventaja 1 -->
+		  <p>Como programador, soy experto en resolver desafíos técnicos de manera eficiente.</p> <!-- Descripción de ventaja 1 -->
+		</div>
+		<div class="item" data-item="2"> <!-- Elemento 2 -->
+		  <h5>Desarrollo de Software Personalizado</h5> <!-- Título de ventaja 2 -->
+		  <p>Tengo la capacidad de crear software adaptado a las necesidades específicas de tu organización.</p> <!-- Descripción de ventaja 2 -->
+		</div>
+	  </div> <!-- /left-side -->
+	  <div class="right-side"> <!-- Lado derecho -->
+		<div class="item" data-item="3"> <!-- Elemento 3 -->
+		  <h5>Automatización de Tareas</h5> <!-- Título de ventaja 3 -->
+		  <p>Puedo automatizar tareas repetitivas, ahorrando tiempo y reduciendo errores.</p> <!-- Descripción de ventaja 3 -->
+		</div>
+		<div class="item" data-item="4"> <!-- Elemento 4 -->
+		  <h5>Actualización Tecnológica Continua</h5> <!-- Título de ventaja 4 -->
+		  <p>Mantengo la tecnología actualizada y segura al seguir las últimas tendencias y mejores prácticas.</p> <!-- Descripción de ventaja 4 -->
+		</div>
+	  </div> <!-- /right-side -->
+	  <div class="image-part2"></div> <!-- Posible espacio para una imagen u otro contenido visual -->
+	</div> <!-- /process-content -->
+</section> <!-- /process -->
+
+<!-- features Section
+================================================== -->
+<!-- El código anterior crea una sección con la identificación "características" que contiene información
+sobre la experiencia laboral del autor como programador. Incluye un encabezado, un párrafo que
+describe la experiencia del autor en varios lenguajes de programación y una lista de características
+con íconos que representan diferentes lenguajes de programación (JavaScript, CSS, HTML, C++, Python
+y Java) y descripciones de la experiencia y habilidades del autor en cada idioma. -->
+<section id="features"> <!-- Sección "Experiencia Laboral" -->
+	<div class="row section-intro"> <!-- Contenedor de introducción -->
+	  <div class="col-twelve with-bottom-line"> <!-- Columna con una línea inferior -->
+		<h5>Exp</h5> <!-- Encabezado de nivel 5 -->
+		<h1>Experiencia Laboral.</h1> <!-- Título principal -->
+		<p class="lead">Durante mi experiencia laboral como programador, he tenido la oportunidad de trabajar en una amplia gama de proyectos que han ampliado mi conocimiento y experiencia en el mundo de la programación. He participado en el desarrollo de sitios web interactivos y atractivos, utilizando tecnologías como HTML, CSS y JavaScript, para crear interfaces de usuario dinámicas y atractivas. Además, he trabajado en proyectos de software más complejos, aplicando mis habilidades en C++, Java y Python para la creación de aplicaciones de alto rendimiento y sistemas de software escalables.</p>
+		<!-- Descripción de la experiencia laboral -->
+	  </div>
+	</div>
+  
+	<div class="row features-content"> <!-- Contenido principal de "Experiencia Laboral" -->
+	  <div class="features-list block-1-3 block-s-1-2 block-tab-full group"> <!-- Lista de características y habilidades -->
+		<div class="bgrid feature"> <!-- Característica 1 -->
+		  <span class="icon"><i class="icon-javascript"></i></span> <!-- Icono de JavaScript -->
+		  <div class="service-content"> <!-- Contenido del servicio 1 -->
+			<h3 class="h05">JavaScript</h3> <!-- Título de habilidad 1: JavaScript -->
+			<p>Mi experiencia en JavaScript se centra en la creación de interacciones dinámicas que mejoran la funcionalidad y la usabilidad de sitios web, brindando experiencias más interactivas y efectivas a los usuarios.</p> <!-- Descripción de habilidad 1 -->
+		  </div>
+		</div> <!-- /bgrid -->
+  
+		<div class="bgrid feature"> <!-- Característica 2 -->
+		  <span class="icon"><i class="icon-css3"></i></span> <!-- Icono de CSS -->
+		  <div class="service-content"> <!-- Contenido del servicio 2 -->
+			<h3 class="h05">CSS</h3> <!-- Título de habilidad 2: CSS -->
+			<p>Mi experiencia en CSS se centra en el diseño de sitios web atractivos y funcionales, mejorando la apariencia y la usabilidad de las interfaces de usuario.</p> <!-- Descripción de habilidad 2 -->
+		  </div>
+		</div> <!-- /bgrid -->
+  
+		<div class="bgrid feature"> <!-- Característica 3 -->
+		  <span class="icon"><i class="icon-html5"></i></span> <!-- Icono de HTML -->
+		  <div class="service-content"> <!-- Contenido del servicio 3 -->
+			<h3 class="h05">HTML</h3> <!-- Título de habilidad 3: HTML -->
+			<p>Durante mi experiencia, he dominado HTML para crear sitios web dinámicos y atractivos. Mi enfoque en estructuras sólidas y accesibles ha permitido la creación de interfaces de usuario efectivas que mejoran la experiencia del usuario y el rendimiento de las páginas web.</p> <!-- Descripción de habilidad 3 -->
+		  </div>
+		</div> <!-- /bgrid -->
+  
+		<div class="bgrid feature"> <!-- Característica 4 -->
+		  <span class="icon"><i class="icon-c"></i></span> <!-- Icono de C++ -->
+		  <div class="service-content"> <!-- Contenido del servicio 4 -->
+			<h3 class="h05">C++</h3> <!-- Título de habilidad 4: C++ -->
+			<p>Mi experiencia en C++ se centra en el desarrollo de aplicaciones de alto rendimiento y sistemas escalables. He aplicado este lenguaje para abordar proyectos técnicamente desafiantes y entregar soluciones eficientes.</p> <!-- Descripción de habilidad 4 -->
+		  </div>
+		</div> <!-- /bgrid -->
+  
+		<div class="bgrid feature"> <!-- Característica 5 -->
+		  <span class="icon"><i class="icon-python"></i></span> <!-- Icono de Python -->
+		  <div class ="service-content"> <!-- Contenido del servicio 5 -->
+			<h3 class="h05">Python</h3> <!-- Título de habilidad 5: Python -->
+			<p>Mi experiencia en Python se enfoca en la creación de soluciones versátiles y eficientes. He utilizado Python para desarrollar herramientas y scripts que mejoran la eficiencia en diversas tareas y procesos.</p> <!-- Descripción de habilidad 5 -->
+		  </div>
+		</div> <!-- /bgrid -->
+  
+		<div class="bgrid feature"> <!-- Característica 6 -->
+		  <span class="icon"><i class="icon-java"></i></span> <!-- Icono de Java -->
+		  <div class="service-content"> <!-- Contenido del servicio 6 -->
+			<h3 class="h05">Java</h3> <!-- Título de habilidad 6: Java -->
+			<p>Mi experiencia en Java se centra en el desarrollo de aplicaciones robustas y escalables. He aplicado Java para crear soluciones confiables que cumplen con los requisitos de proyectos de envergadura.</p> <!-- Descripción de habilidad 6 -->
+		  </div>
+		</div> <!-- /bgrid -->
+	  </div> <!-- /features-list -->
+	</div> <!-- /features-content -->
+</section> <!-- /features -->
+
+<!-- pricing
+================================================== -->
+<!-- El código anterior crea una sección llamada "Habilidades Clave" con un título y un párrafo de
+introducción. Luego crea cuatro bloques de precios, cada uno de los cuales representa una habilidad
+clave de un programador. Cada bloque incluye un título y un icono que representa la habilidad. Las
+habilidades mencionadas son "Comunicación Efectiva", "Conocimiento de Bases de Datos", "Desarrollo
+Web y Frontend" y "Mantenimiento de Código y Depuración". Depuración -->
+<section id="pricing"> <!-- Sección de "Habilidades Clave" -->
+	<div class="row section-intro"> <!-- Contenedor de introducción -->
+	  <div class="col-twelve with-bottom-line"> <!-- Columna con una línea inferior -->
+		<h5>Habilidades Clave</h5> <!-- Encabezado de nivel 5 -->
+		<h1>Mis Habilidades Como Programador</h1> <!-- Título principal -->
+		<p class="lead"></p> <!-- Párrafo de introducción -->
+	  </div>
+	</div>
+	<div class="row pricing-content"> <!-- Contenido principal de "Habilidades Clave" -->
+	  <div class="pricing-tables block-1-4 group"> <!-- Tablas de precios (grupos de 4) -->
+		<div class="bgrid"> <!-- Bloque de precio 1 -->
+		  <div class="price-block">
+			<div class="top-part">
+			  <h3 class="plan-title">Comunicación Efectiva</h3> <!-- Título de la habilidad 1 -->
+			  <span class="icon"><i class="icon-users"></i></span> <!-- Icono de "usuarios" -->
+			</div>
+		  </div>
+		</div> <!-- /price-block -->
+		<div class="bgrid"> <!-- Bloque de precio 2 -->
+		  <div class="price-block">
+			<div class="top-part">
+			  <h3 class="plan-title">Conocimiento de Bases de Datos</h3> <!-- Título de la habilidad 2 -->
+			  <span class="icon"><i class="icon-database"></i></span> <!-- Icono de "base de datos" -->
+			</div>
+		  </div>
+		</div> <!-- /price-block -->
+		<div class="bgrid"> <!-- Bloque de precio 3 -->
+		  <div class="price-block">
+			<div class="top-part">
+			  <h3 class="plan-title">Desarrollo Web y Frontend</h3> <!-- Título de la habilidad 3 -->
+			  <span class="icon"><i class="icon-display"></i></span> <!-- Icono de "pantalla" -->
+			</div>
+		  </div>
+		</div> <!-- /price-block -->
+		<div class="bgrid"> <!-- Bloque de precio 4 -->
+		  <div class="price-block">
+			<div class="top-part">
+			  <h3 class="plan-title">Mantenimiento de Código y Depuración</h3> <!-- Título de la habilidad 4 -->
+			  <span class="icon"><i class="icon-embed2"></i></span> <!-- Icono de "incrustar" -->
+			</div>
+		  </div>
+		</div> <!-- /price-block -->
+	  </div> <!-- /pricing-tables -->
+	</div> <!-- /pricing-content -->
+</section> <!-- /pricing -->
+
+<!-- faq
+================================================== -->
+<!-- Crea una sección en una página web que muestra una lista de proyectos que el
+autor ha completado. Cada proyecto está representado por un bloque que incluye un título, una
+descripción y un icono. Los proyectos van desde un robot transportador hasta una aplicación de
+reconocimiento facial. El código también incluye algunos elementos de estilo y diseño para que la
+sección sea visualmente atractiva. -->
+<section id="faq"> <!-- Sección de "Mis Proyectos Realizados" -->
+	<div class="row section-intro"> <!-- Contenedor de introducción -->
+	  <div class="col-twelve with-bottom-line"> <!-- Columna con una línea inferior -->
+		<h5>PROYECTOS Realizados</h5> <!-- Encabezado de nivel 5 -->
+		<h1>Mis Proyectos Realizados</h1> <!-- Título principal -->
+		<p class="lead">A lo largo de mi carrera, he participado en diversos proyectos que reflejan mi pasión por la programación y mi capacidad para abordar desafíos técnicos. Mi experiencia en el desarrollo de aplicaciones, sitios web y sistemas de software muestra mi compromiso con la innovación y la entrega de soluciones efectivas.</p> <!-- Párrafo de introducción -->
+	  </div>
+	</div>
+	<div class="row faq-content"> <!-- Contenido principal de "Mis Proyectos Realizados" -->
+	  <div class="q-and-a block-1-2 block-tab-full group"> <!-- Bloques de preguntas y respuestas (grupo de 2) -->
+		<div class="bgrid"> <!-- Bloque 1 -->
+		  <h3>Transportador De Objetos</h3> <!-- Título del proyecto 1 -->
+		  <p>Este proyecto consiste en un robot automatizado diseñado para transportar objetos de un lugar a otro de manera eficiente. Utiliza la automatización y la tecnología para facilitar la logística y el movimiento de objetos.</p> <!-- Descripción del proyecto 1 -->
+		  <a href="Avances Proyecto/Avances_Proyecto.html"> <!-- Enlace al proyecto 1 -->
+			<span class="icon">
+			  <i class="icon-probot"></i> <!-- Icono del proyecto 1 (icono de robot) -->
+			</span>
+		  </a>
+		</div>
+		<div class="bgrid"> <!-- Bloque 2 -->
+		  <h3>InformationUdeCundinamarca</h3> <!-- Título del proyecto 2 -->
+		  <p>Se trata de una aplicación móvil que proporciona información valiosa sobre la Universidad de Cundinamarca. Ofrece detalles sobre las ubicaciones de las clases, horarios, tareas y eventos universitarios, brindando a los estudiantes una herramienta útil para su vida académica.</p> <!-- Descripción del proyecto 2 -->
+		  <span class="icon"><i class="icon-mobile"></i></span> <!-- Icono del proyecto 2 (icono de móvil) -->
+		</div>
+		<div class="bgrid"> <!-- Bloque 3 -->
+			<h3>Registro Facial</h3><!-- Título del proyecto 3 -->
+			<p>Esta aplicación, desarrollada en Python, utiliza inteligencia artificial para permitir el registro facial. Puede ser utilizada para autenticación o identificación de personas basada en reconocimiento facial, lo que aporta seguridad y comodidad.</p> <!-- Descripción del proyecto 3 -->
+			<span class="icon"><i class="icon-unlocked"></i></span> <!-- Icono del proyecto 3 (icono de candado) -->
+		</div>
+		<div class="bgrid"> <!-- Bloque 4 -->
+			<h3>TeachMath</h3><!-- Título del proyecto 4 -->
+			<p>Similar a TechEnglish, TechMath es una aplicación que utiliza juegos y tutoriales para enseñar y practicar conceptos matemáticos. Ayuda a los estudiantes y entusiastas de las matemáticas a fortalecer sus habilidades de una manera interactiva.</p> <!-- Descripción del proyecto 4 -->
+		 <span class="icon"><i class="icon-calculator"></i></span> <!-- Icono del proyecto 4 (icono calculadora) -->
+		</div>
+		<div class="bgrid"> <!-- Bloque 5 -->
+			<h3>TechEnglish</h3><!-- Título del proyecto 5 -->
+			<p>Es una aplicación que combina juegos y tutoriales para facilitar el aprendizaje del inglés. Proporciona una plataforma interactiva que ayuda a los usuarios a mejorar sus habilidades en el idioma de manera divertida y efectiva.</p> <!-- Descripción del proyecto 5 -->
+		 <span class="icon"><i class="icon-indent-increase"></i></span> <!-- Icono del proyecto 5 (icono de texto) -->
+		</div>
+		<div class="bgrid"> <!-- Bloque 6 -->
+			<h3>DronSegurity</h3><!-- Título del proyecto 6 -->
+			<p>Este proyecto se enfoca en el uso de un dron para la búsqueda de objetos específicos y la grabación de áreas para fines de seguridad. Ofrece una solución tecnológica para la vigilancia y la grabación de áreas extensas, lo que puede ser valioso en diversas aplicaciones de seguridad.</p> <!-- Descripción del proyecto 6 -->
+			<span class="icon"><i class="icon-drone"></i></span> <!-- Icono del proyecto 6 (icono de drone) -->
+		</div>
+	</div> <!-- /q-and-a --> 
+</div> <!-- /faq-content --> 
+</section> <!-- /faq  -->
+<!-- footer
+================================================== -->
+<!-- Crea una sección de pie de página para un sitio web. Incluye varios elementos
+como un logotipo, un mensaje de agradecimiento, enlaces a sitios, enlaces sociales, un formulario de
+suscripción y un botón para volver al principio. El pie de página se divide en dos secciones: el pie
+de página principal y el pie de página inferior. El pie de página principal contiene el contenido
+principal del pie de página, mientras que el pie de página inferior contiene el botón de volver al
+principio. -->
+   <footer>
+	<div class="footer-main">
+	   <div class="row">
+		  <div class="col-four tab-full mob-full footer-info">
+			 <div class="footer-logo"></div> <!-- Logo del pie de página -->
+			 <p>
+				Gracias Por Ver Mi Portafolio <!-- Mensaje de agradecimiento -->
+			 </p>
+		  </div> <!-- /footer-info -->
+		  <div class="col-two tab-1-3 mob-1-2 site-links">
+			 <h4>Site Links</h4> <!-- Título de enlaces del sitio -->
+			 <ul>
+				<li class="current"><a class="smoothscroll"  href="#intro" title="">Inicio</a></li> <!-- Enlace a la sección "Inicio" -->
+				<li><a class ="smoothscroll" href="#process" title="">Acerca de mí</a></li> <!-- Enlace a la sección "Acerca de mí" -->
+				<li><a class ="smoothscroll" href="#features" title="">Exp</a></li> <!-- Enlace a la sección "Experiencia Laboral" -->
+				<li><a class ="smoothscroll" href="#pricing" title="">Habilidades Clave</a></li> <!-- Enlace a la sección "Habilidades Clave" -->
+				<li><a class ="smoothscroll" href="#faq" title="">Proyectos Destacados</a></li> <!-- Enlace a la sección "Proyectos Destacados" -->
+			 </ul>
+		  </div> <!-- /site-links -->
+		  <div class="col-two tab-1-3 mob-1-2 social-links">
+			 <h4>Social</h4> <!-- Título de enlaces sociales -->
+			 <ul>
+				<li><a href="#">Twitter</a></li> <!-- Enlace a Twitter -->
+				<li><a href="#">Facebook</a></li> <!-- Enlace a Facebook -->
+				<li><a href="#">Github</a></li> <!-- Enlace a Github -->
+				<li><a href="#">Discord</a></li> <!-- Enlace a Discord -->
+			 </ul>
+		  </div> <!-- /social -->
+		  <div class="col-four tab-1-3 mob-full footer-subscribe">
+			 <h4>Subscribe</h4> <!-- Título de suscripción -->
+			 <p>Manténgase actualizado. Suscríbete aquí.</p> <!-- Mensaje de suscripción -->
+			 <div class="subscribe-form">
+				<form id="mc-form" class="group" novalidate="true">
+				   <input type="email" value="" name="dEmail" class="email" id="mc-email" placeholder="type email &amp; hit enter" required=""> <!-- Campo de entrada de correo electrónico -->
+				   <input type="submit" name="subscribe"> <!-- Botón de suscripción -->
+				   <label for="mc-email" class="subscribe-message"></label> <!-- Etiqueta de mensaje de suscripción -->
+				</form>
+			 </div>
+		  </div> <!-- /subscribe -->
+	   </div> <!-- /row -->
+	</div> <!-- /footer-main -->
+	<div class="footer-bottom">
+	   <div class="row">
+		  <div class="col-twelve">
+			 <div id="go-top" style="display: block;"> <!-- Enlace para regresar arriba -->
+				<a class="smoothscroll" title="Back to Top" href="#top"><i class="icon ion-android-arrow-up"></i></a>
+			 </div>
+		  </div>
+	   </div> <!-- /footer-bottom -->
+	</div>
+ </footer>
+   
+<!-- Crea un elemento de precargador en HTML. El precargador es un indicador visual
+que se muestra mientras se carga el contenido de una página web. Ayuda a proporcionar información al
+usuario de que la página aún se está cargando y evita que vea contenido incompleto o roto. El código
+crea un elemento div con el id "precargador" y un elemento div secundario con el id "cargador" que
+representa la animación de carga real. -->
+  <div id="preloader">
+    <div id="loader"></div> <!-- Elemento de precarga -->
+  </div>
+
+<!-- JavaScript
+================================================== -->
+<!-- incluye varios archivos JavaScript en un documento HTML. -->
+<script src="public/js/jquery-1.11.3.min.js"></script> <!-- Incluye la biblioteca jQuery -->
+<script src="public/js/jquery-migrate-1.2.1.min.js"></script> <!-- Incluye una extensión de jQuery para migración -->
+<script src="public/js/plugins.js"></script> <!-- Incluye archivos de complementos o plugins JavaScript -->
+<script src="public/js/main.js"></script> <!-- Incluye el archivo principal de JavaScript de la página -->
+<script src="app.js"></script>
+
+</body>
+
+</html>
