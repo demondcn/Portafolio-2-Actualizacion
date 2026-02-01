@@ -1,0 +1,90 @@
+.bacanodnos3d-theme {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 191 97% 44%;
+  --primary-foreground: 222.2 84% 4.9%;
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 262 83% 58%;
+  --accent-foreground: 210 40% 98%;
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 191 97% 44%;
+}
+
+.bacanodnos3d-theme .glass {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(34, 211, 238, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(34, 211, 238, 0.5); }
+}
+
+.bacanodnos3d-theme .animate-fade-in-up { animation: fade-in-up 0.7s ease-out forwards; }
+.bacanodnos3d-theme .animate-fade-in { animation: fade-in 0.5s ease-out forwards; }
+.bacanodnos3d-theme .animate-slide-in-left { animation: slide-in-left 0.7s ease-out forwards; }
+.bacanodnos3d-theme .animate-slide-in-right { animation: slide-in-right 0.7s ease-out forwards; }
+.bacanodnos3d-theme .animate-float { animation: float 3s ease-in-out infinite; }
+.bacanodnos3d-theme .animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+
+.bacanodnos3d-theme .delay-100 { animation-delay: 100ms; }
+.bacanodnos3d-theme .delay-200 { animation-delay: 200ms; }
+.bacanodnos3d-theme .delay-300 { animation-delay: 300ms; }
+.bacanodnos3d-theme .delay-400 { animation-delay: 400ms; }
+.bacanodnos3d-theme .delay-500 { animation-delay: 500ms; }
+.bacanodnos3d-theme .delay-600 { animation-delay: 600ms; }
+.bacanodnos3d-theme .delay-700 { animation-delay: 700ms; }
+.bacanodnos3d-theme .delay-800 { animation-delay: 800ms; }
