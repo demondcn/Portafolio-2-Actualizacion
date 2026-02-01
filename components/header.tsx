@@ -3,10 +3,12 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X, Github, Linkedin, Mail, Zap } from "lucide-react"
+import { useLanguage } from "@/components/language-provider"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const { lang, setLang } = useLanguage()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,21 +18,42 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const navItems = [
-    { name: "INICIO", href: "#hero" },
-    { name: "ACERCA", href: "#about" },
-    { name: "EXPERIENCIA", href: "#experience" },
-    { name: "SKILLS", href: "#skills" },
-    { name: "PROYECTOS", href: "#projects" },
-    { name: "CONTACTO", href: "#contact" },
-  ]
+  const navItems =
+    lang === "es"
+      ? [
+          { name: "BACANODNOS3D", href: "/bacanodnos3d", external: true },
+          { name: "INICIO", href: "#hero" },
+          { name: "ACERCA", href: "#about" },
+          { name: "EXPERIENCIA", href: "#experience" },
+          { name: "SKILLS", href: "#skills" },
+          { name: "PROYECTOS", href: "#projects" },
+          { name: "CONTACTO", href: "#contact" },
+        ]
+      : [
+          { name: "BACANODNOS3D", href: "/bacanodnos3d", external: true },
+          { name: "HOME", href: "#hero" },
+          { name: "ABOUT", href: "#about" },
+          { name: "EXPERIENCE", href: "#experience" },
+          { name: "SKILLS", href: "#skills" },
+          { name: "PROJECTS", href: "#projects" },
+          { name: "CONTACT", href: "#contact" },
+        ]
 
   const scrollToSection = (href: string) => {
+    if (href.startsWith("/")) {
+      window.location.href = href
+      setIsMenuOpen(false)
+      return
+    }
     const element = document.querySelector(href)
     if (element) {
       element.scrollIntoView({ behavior: "smooth" })
     }
     setIsMenuOpen(false)
+  }
+
+  const toggleLang = () => {
+    setLang(lang === "es" ? "en" : "es")
   }
 
   return (
@@ -55,15 +78,24 @@ export function Header() {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-cyan-300 hover:text-cyan-400 transition-colors font-orbitron text-sm hover:glow-text"
+                className={`text-cyan-300 hover:text-cyan-400 transition-colors font-orbitron text-sm hover:glow-text ${item.external ? "text-purple-300" : ""}`}
               >
                 {item.name}
               </button>
             ))}
           </nav>
 
-          {/* Social Links */}
+          {/* Social Links + Language */}
           <div className="hidden md:flex items-center space-x-4">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={toggleLang}
+              className="arcade-button-outline border-cyan-500/40 text-cyan-300 hover:text-cyan-200"
+              aria-label={lang === "es" ? "Cambiar a ingles" : "Switch to Spanish"}
+            >
+              {lang === "es" ? "EN" : "ES"}
+            </Button>
             <Button variant="ghost" size="icon" asChild className="arcade-icon-button">
               <a
                 href="https://www.linkedin.com/in/cristian-stiven-guerrero-andrade-877625267/"
@@ -104,12 +136,21 @@ export function Header() {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-cyan-300 hover:text-cyan-400 transition-colors font-orbitron text-left hover:glow-text"
+                  className={`text-cyan-300 hover:text-cyan-400 transition-colors font-orbitron text-left hover:glow-text ${item.external ? "text-purple-300" : ""}`}
                 >
                   {item.name}
                 </button>
               ))}
               <div className="flex items-center space-x-4 pt-4 border-t border-cyan-500/30">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={toggleLang}
+                  className="arcade-button-outline border-cyan-500/40 text-cyan-300 hover:text-cyan-200"
+                  aria-label={lang === "es" ? "Cambiar a ingles" : "Switch to Spanish"}
+                >
+                  {lang === "es" ? "EN" : "ES"}
+                </Button>
                 <Button variant="ghost" size="icon" asChild className="arcade-icon-button">
                   <a
                     href="https://www.linkedin.com/in/cristian-stiven-guerrero-andrade-877625267/"
