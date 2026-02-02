@@ -52,10 +52,10 @@ const SIZES = [
 ];
 
 const MATERIALS = [
-  { name: "PLA", description: "Economico y ecologico" },
-  { name: "PETG", description: "Resistente y duradero" },
-  { name: "ABS", description: "Alta resistencia termica" },
-  { name: "TPU Flexible", description: "Material flexible" },
+  { name: "PLA", description: "Economico y ecologico", costPerGram: 60 },
+  { name: "PETG", description: "Resistente y duradero", costPerGram: 70 },
+  { name: "ABS", description: "Alta resistencia termica", costPerGram: 90 },
+  { name: "TPU Flexible", description: "Material flexible", costPerGram: 82 },
 ];
 
 const PLA_DENSITY = 1.24; // g/cm3
@@ -293,7 +293,7 @@ export function QuoteCalculator() {
   const calculatePrice = () => {
     if (!file) return 0;
     const grams = estimateGrams();
-    const cp = selectedColor.costPerGram * grams;
+    const cp = selectedMaterial.costPerGram * grams;
     const ch = estimateTimeHours() * 3000;
     const base = cp + ch;
     const sgm = base * 0.1;
@@ -353,27 +353,27 @@ export function QuoteCalculator() {
   };
 
   return (
-    <section id="cotizar" className="py-32 relative overflow-hidden">
+    <section id="cotizar" className="py-20 sm:py-24 lg:py-32 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-muted/30 via-background to-muted/20" />
       <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 -right-32 w-80 h-80 bg-accent/10 rounded-full blur-3xl" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <span className="inline-flex items-center gap-2 px-5 py-2.5 glass rounded-full text-primary text-sm font-medium mb-6 shadow-lg animate-fade-in-up">
             <Sparkles className="w-4 h-4" />
             Cotizador Online
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance tracking-tight animate-fade-in-up delay-100">
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6 text-balance tracking-tight animate-fade-in-up delay-100">
             Cotiza y Solicita tu Impresion 3D
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-xl leading-relaxed animate-fade-in-up delay-200">
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg sm:text-xl leading-relaxed animate-fade-in-up delay-200">
             Configura tu impresion y completa tus datos para recibir una cotizacion personalizada
           </p>
 
           {/* Progress Steps */}
-          <div className="flex items-center justify-center gap-4 mt-12 animate-fade-in-up delay-300">
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mt-10 sm:mt-12 animate-fade-in-up delay-300">
             <div className={`flex items-center gap-2 ${step === "quote" ? "text-primary" : "text-muted-foreground"}`}>
               <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-sm font-bold shadow-lg transition-all duration-500 ${step === "quote" ? "bg-primary text-primary-foreground shadow-primary/30" : step === "contact" || step === "success" ? "bg-primary text-primary-foreground shadow-primary/30" : "bg-muted text-muted-foreground"}`}>
                 {step === "contact" || step === "success" ? <CheckCircle2 className="w-5 h-5" /> : "1"}
@@ -453,10 +453,10 @@ export function QuoteCalculator() {
             </CardContent>
           </Card>
         ) : (
-          <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
             {/* Main Content */}
             <Card className="lg:col-span-2 glass animate-slide-in-left">
-              <CardContent className="p-8">
+              <CardContent className="p-4 sm:p-6 lg:p-8">
                 {step === "quote" ? (
                   <>
                     {/* 3D Viewer + File Upload */}
@@ -469,7 +469,7 @@ export function QuoteCalculator() {
                       </Label>
                       
                       {/* 3D Viewer */}
-                      <div className="mt-4 h-[350px] rounded-2xl overflow-hidden border-2 border-border/30 shadow-xl">
+                      <div className="mt-4 h-[260px] sm:h-[320px] lg:h-[350px] rounded-2xl overflow-hidden border-2 border-border/30 shadow-xl">
                         <STLViewer 
                           fileUrl={file?.url || null} 
                           color={selectedColor.hex} 
@@ -493,12 +493,12 @@ export function QuoteCalculator() {
                           className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
                         />
                         {file ? (
-                          <div className="flex items-center justify-center gap-4">
+                          <div className="flex items-center justify-center gap-3 sm:gap-4">
                             <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
                               <FileType className="w-6 h-6 text-primary" />
                             </div>
                             <div className="text-left">
-                              <p className="font-bold text-foreground">{file.name}</p>
+                              <p className="font-bold text-foreground break-all">{file.name}</p>
                               <p className="text-sm text-muted-foreground">
                                 {(file.size / 1024 / 1024).toFixed(2)} MB
                               </p>
@@ -540,7 +540,7 @@ export function QuoteCalculator() {
                         </div>
                         Material
                       </Label>
-                      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mt-4">
                         {MATERIALS.map((material) => (
                           <button
                             key={material.name}
@@ -569,7 +569,7 @@ export function QuoteCalculator() {
                           (el modelo cambiara de color)
                         </span>
                       </Label>
-                      <div className="flex flex-wrap gap-4 mt-4">
+                      <div className="flex flex-wrap gap-3 sm:gap-4 mt-4">
                         {COLORS.map((color) => (
                           <button
                             key={color.name}
@@ -598,7 +598,7 @@ export function QuoteCalculator() {
                         </div>
                         Escala / Tamano
                       </Label>
-                      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mt-4">
                         {SIZES.map((size) => (
                           <button
                             key={size.name}
@@ -647,7 +647,7 @@ export function QuoteCalculator() {
                       <p className="text-muted-foreground">Te contactaremos para confirmar tu pedido</p>
                     </div>
                     
-                    <div className="grid md:grid-cols-2 gap-6 mb-6">
+                    <div className="grid md:grid-cols-2 gap-4 sm:gap-6 mb-6">
                       <div>
                         <Label htmlFor="name" className="text-sm font-medium mb-2 block">Nombre completo</Label>
                         <Input 
@@ -671,7 +671,7 @@ export function QuoteCalculator() {
                       </div>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-6 mb-6">
+                    <div className="grid md:grid-cols-2 gap-4 sm:gap-6 mb-6">
                       <div>
                         <Label htmlFor="phone" className="text-sm font-medium mb-2 block">Telefono</Label>
                         <Input 
@@ -709,7 +709,7 @@ export function QuoteCalculator() {
                     {/* Contact Info */}
                     <div className="glass rounded-2xl p-6 mb-8">
                       <h4 className="font-bold text-foreground mb-4">Tambien puedes contactarnos directamente:</h4>
-                      <div className="grid grid-cols-2 gap-4">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {contactInfo.map((info) => (
                           <a
                             key={info.label}
@@ -723,13 +723,13 @@ export function QuoteCalculator() {
                       </div>
                     </div>
 
-                    <div className="flex gap-4 flex-wrap">
+                    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 flex-wrap">
                       <Button
                         type="button"
                         variant="outline"
                         size="lg"
                         onClick={() => setStep("quote")}
-                        className="gap-2 bg-transparent hover:bg-muted/50"
+                        className="gap-2 bg-transparent hover:bg-muted/50 w-full sm:w-auto"
                       >
                         <ArrowLeft className="w-4 h-4" />
                         Volver
@@ -739,14 +739,14 @@ export function QuoteCalculator() {
                         variant="outline"
                         size="lg"
                         onClick={handleWhatsApp}
-                        className="gap-2 bg-transparent hover:bg-muted/50"
+                        className="gap-2 bg-transparent hover:bg-muted/50 w-full sm:w-auto"
                       >
                         Comunicarse por WhatsApp
                       </Button>
                       <Button 
                         type="submit" 
                         size="lg" 
-                        className="flex-1 gap-2 shadow-lg shadow-primary/30 min-w-[220px]"
+                        className="flex-1 gap-2 shadow-lg shadow-primary/30 min-w-0 w-full sm:w-auto"
                         disabled={isSubmitting}
                       >
                         {isSubmitting ? (
@@ -769,8 +769,8 @@ export function QuoteCalculator() {
 
             {/* Price Sidebar */}
             <div className="animate-slide-in-right">
-              <Card className="glass sticky top-24">
-                <CardContent className="p-8">
+              <Card className="glass lg:sticky lg:top-24">
+                <CardContent className="p-5 sm:p-8">
                   <div className="flex items-center gap-3 mb-8">
                     <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center">
                       <Calculator className="w-6 h-6 text-primary" />

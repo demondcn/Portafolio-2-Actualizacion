@@ -31,20 +31,20 @@ const steps = [
 
 export function Process() {
   return (
-    <section id="proceso" className="py-32 relative overflow-hidden">
+    <section id="proceso" className="py-20 sm:py-24 lg:py-32 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-muted/30 to-background" />
       <div className="absolute bottom-0 right-0 w-[600px] h-[400px] bg-primary/5 rounded-full blur-3xl" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-20">
           <span className="inline-block px-5 py-2 glass rounded-full text-primary text-sm font-medium mb-6 shadow-lg animate-fade-in-up">
             Proceso
           </span>
-          <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6 text-balance tracking-tight animate-fade-in-up delay-100">
+          <h2 className="text-3xl sm:text-5xl font-bold text-foreground mb-6 text-balance tracking-tight animate-fade-in-up delay-100">
             Como trabajamos
           </h2>
-          <p className="text-muted-foreground text-xl leading-relaxed animate-fade-in-up delay-200">
+          <p className="text-muted-foreground text-lg sm:text-xl leading-relaxed animate-fade-in-up delay-200">
             Un proceso simple y transparente para que tu experiencia sea
             lo mas fluida posible.
           </p>

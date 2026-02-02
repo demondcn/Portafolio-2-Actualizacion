@@ -38,20 +38,20 @@ const services = [
 
 export function Services() {
   return (
-    <section id="servicios" className="py-32 relative overflow-hidden">
+    <section id="servicios" className="py-20 sm:py-24 lg:py-32 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-muted/30 to-background" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/5 rounded-full blur-3xl" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-20">
           <span className="inline-block px-5 py-2 glass rounded-full text-primary text-sm font-medium mb-6 shadow-lg animate-fade-in-up">
             Nuestros Servicios
           </span>
-          <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6 text-balance tracking-tight animate-fade-in-up delay-100">
+          <h2 className="text-3xl sm:text-5xl font-bold text-foreground mb-6 text-balance tracking-tight animate-fade-in-up delay-100">
             Soluciones completas de impresion 3D
           </h2>
-          <p className="text-muted-foreground text-xl leading-relaxed animate-fade-in-up delay-200">
+          <p className="text-muted-foreground text-lg sm:text-xl leading-relaxed animate-fade-in-up delay-200">
             Ofrecemos servicios integrales para todo tipo de proyectos,
             desde prototipos unicos hasta produccion en masa.
           </p>

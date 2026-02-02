@@ -8,17 +8,17 @@ export function Footer() {
       <div className="absolute inset-0 bg-foreground" />
       <div className="absolute top-0 left-1/4 w-[500px] h-[300px] bg-primary/10 rounded-full blur-3xl" />
       
-      <div className="relative z-10 text-background py-16">
+      <div className="relative z-10 text-background py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-12">
+          <div className="grid md:grid-cols-4 gap-10 sm:gap-12">
             <div className="md:col-span-2">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/30">
                   <span className="text-primary-foreground font-bold text-xl">B</span>
                 </div>
-                <span className="font-bold text-2xl tracking-tight">bacanodnos3d</span>
+                <span className="font-bold text-xl sm:text-2xl tracking-tight">bacanodnos3d</span>
               </div>
-              <p className="text-background/70 max-w-md leading-relaxed text-lg mb-8">
+              <p className="text-background/70 max-w-md leading-relaxed text-base sm:text-lg mb-8">
                 Servicio profesional de impresion 3D. Transformamos tus ideas en realidad
                 con la mas alta calidad y precision.
               </p>
@@ -79,7 +79,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="border-t border-background/10 mt-16 pt-8 text-center text-background/50">
+          <div className="border-t border-background/10 mt-12 sm:mt-16 pt-8 text-center text-background/50">
             <p>&copy; {new Date().getFullYear()} bacanodnos3d. Todos los derechos reservados.</p>
           </div>
         </div>

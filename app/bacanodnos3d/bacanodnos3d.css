@@ -88,3 +88,19 @@
 .bacanodnos3d-theme .delay-600 { animation-delay: 600ms; }
 .bacanodnos3d-theme .delay-700 { animation-delay: 700ms; }
 .bacanodnos3d-theme .delay-800 { animation-delay: 800ms; }
+
+@media (max-width: 640px) {
+  .bacanodnos3d-theme .animate-slide-in-left,
+  .bacanodnos3d-theme .animate-slide-in-right,
+  .bacanodnos3d-theme .animate-fade-in-up {
+    animation-duration: 0.45s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bacanodnos3d-theme * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

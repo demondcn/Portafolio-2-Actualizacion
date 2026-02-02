@@ -52,7 +52,7 @@ function BearModel() {
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <section className="relative min-h-screen flex items-center pt-16 sm:pt-20 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5" />
       <div className="absolute top-1/4 -right-32 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-glow" />
@@ -65,37 +65,37 @@ export function Hero() {
         backgroundSize: '60px 60px'
       }} />
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div className="space-y-8">
             <div className="inline-flex items-center gap-2 px-5 py-2.5 glass rounded-full text-primary text-sm font-medium animate-fade-in-up shadow-lg">
               <Sparkles className="w-4 h-4" />
               Impresion 3D de Alta Calidad
             </div>
             
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] tracking-tight animate-fade-in-up delay-100">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] tracking-tight animate-fade-in-up delay-100">
               <span className="text-balance">Hacemos realidad</span>
               <span className="text-primary block mt-2">tus ideas en 3D</span>
             </h1>
             
-            <p className="text-xl text-muted-foreground max-w-lg leading-relaxed animate-fade-in-up delay-200">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-lg leading-relaxed animate-fade-in-up delay-200">
               Servicio profesional de impresion 3D. Desde prototipos hasta produccion en serie, 
               transformamos tus disenos en piezas fisicas de alta precision.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-300">
-              <Button size="lg" asChild className="text-lg px-8 py-6 shadow-xl shadow-primary/30 hover:shadow-primary/50 transition-all duration-300 hover:scale-105">
+              <Button size="lg" asChild className="text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 w-full sm:w-auto shadow-xl shadow-primary/30 hover:shadow-primary/50 transition-all duration-300 hover:scale-105">
                 <Link href="#cotizar" className="gap-3">
                   Solicitar Cotizacion
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" asChild className="text-lg px-8 py-6 bg-transparent hover:bg-muted/50 transition-all duration-300">
+              <Button size="lg" variant="outline" asChild className="text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 w-full sm:w-auto bg-transparent hover:bg-muted/50 transition-all duration-300">
                 <Link href="#trabajos">Ver Trabajos</Link>
               </Button>
             </div>
 
-            <div className="flex items-center gap-10 pt-6 animate-fade-in-up delay-400">
+            <div className="flex flex-wrap items-center gap-6 sm:gap-10 pt-4 sm:pt-6 animate-fade-in-up delay-400">
               <div className="flex items-center gap-3">
                 <div className="w-14 h-14 glass rounded-2xl flex items-center justify-center shadow-lg">
                   <Layers className="w-7 h-7 text-primary" />
@@ -119,12 +119,12 @@ export function Hero() {
           </div>
 
           <div className="relative animate-slide-in-right delay-200">
-            <div className="relative glass rounded-3xl p-10 shadow-2xl">
+            <div className="relative glass rounded-3xl p-5 sm:p-10 shadow-2xl">
               <div className="aspect-square bg-gradient-to-br from-muted/50 to-muted rounded-2xl flex items-center justify-center overflow-hidden">
                 <div className="relative w-full h-full flex items-center justify-center">
                   <div className="absolute w-64 h-64 bg-primary/20 rounded-full blur-3xl animate-pulse" />
                   <div className="relative z-10 text-center animate-float">
-                    <div className="w-64 h-64 mx-auto mb-6 glass rounded-3xl border border-primary/20 shadow-xl overflow-hidden">
+                    <div className="w-48 h-48 sm:w-64 sm:h-64 mx-auto mb-4 sm:mb-6 glass rounded-3xl border border-primary/20 shadow-xl overflow-hidden">
                       <Canvas
                         shadows
                         camera={{ position: [3, 3, 3], fov: 40 }}
@@ -137,15 +137,15 @@ export function Hero() {
                         <BearModel />
                       </Canvas>
                     </div>
-                    <p className="text-muted-foreground font-medium text-lg">Tu proximo proyecto</p>
+                    <p className="text-muted-foreground font-medium text-base sm:text-lg">Tu proximo proyecto</p>
                   </div>
                 </div>
               </div>
               
-              <div className="absolute -bottom-5 -right-5 bg-primary text-primary-foreground px-6 py-3 rounded-2xl shadow-xl shadow-primary/30 animate-fade-in delay-500">
+              <div className="absolute -bottom-4 right-2 sm:-bottom-5 sm:-right-5 bg-primary text-primary-foreground px-4 sm:px-6 py-2 sm:py-3 rounded-2xl shadow-xl shadow-primary/30 animate-fade-in delay-500">
                 <div className="flex items-center gap-2">
                   <Zap className="w-5 h-5" />
-                  <p className="font-semibold">Entrega en 24-72h</p>
+                  <p className="font-semibold text-sm sm:text-base">Entrega en 24-72h</p>
                 </div>
               </div>
             </div>

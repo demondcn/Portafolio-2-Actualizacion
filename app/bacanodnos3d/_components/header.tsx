@@ -26,20 +26,19 @@ export function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center h-16 sm:h-20">
           <Link href="/bacanodnos3d" className="flex items-center gap-3 group">
-            <div className="w-11 h-11 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/30 group-hover:shadow-primary/50 transition-all duration-300 group-hover:scale-105">
-              <span className="text-primary-foreground font-bold text-xl">B</span>
+            <div className="w-9 h-9 sm:w-11 sm:h-11 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/30 group-hover:shadow-primary/50 transition-all duration-300 group-hover:scale-105">
+              <span className="text-primary-foreground font-bold text-base sm:text-xl">B</span>
             </div>
-            <span className="font-bold text-xl text-foreground tracking-tight">bacanodnos3d</span>
+            <span className="font-bold text-base sm:text-xl text-foreground tracking-tight">bacanodnos3d</span>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-10">
+          <nav className="hidden md:flex items-center gap-10 ml-12 lg:ml-16">
             {[
               { href: "#servicios", label: "Servicios" },
               { href: "#trabajos", label: "Trabajos" },
               { href: "#proceso", label: "Proceso" },
-              { href: "#cotizar", label: "Cotizar" },
             ].map((link) => (
               <Link
                 key={link.href}
@@ -52,14 +51,14 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="hidden md:block">
+          <div className="hidden md:block ml-auto">
             <Button asChild size="lg" className="shadow-lg shadow-primary/30 hover:shadow-primary/50 transition-all duration-300 hover:scale-105">
               <Link href="#cotizar">Cotizar Ahora</Link>
             </Button>
           </div>
 
           <button
-            className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors"
+            className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors ml-auto"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -73,12 +72,11 @@ export function Header() {
 
         {isMenuOpen && (
           <div className="md:hidden py-6 border-t border-border/50 animate-fade-in">
-            <nav className="flex flex-col gap-4">
+            <nav className="flex flex-col gap-4 items-end text-right">
               {[
                 { href: "#servicios", label: "Servicios" },
                 { href: "#trabajos", label: "Trabajos" },
                 { href: "#proceso", label: "Proceso" },
-                { href: "#cotizar", label: "Cotizar" },
               ].map((link, index) => (
                 <Link
                   key={link.href}
@@ -90,7 +88,7 @@ export function Header() {
                   {link.label}
                 </Link>
               ))}
-              <Button asChild className="w-fit mt-2 animate-fade-in-up" style={{ animationDelay: "400ms" }}>
+              <Button asChild className="w-fit mt-2 animate-fade-in-up self-end" style={{ animationDelay: "400ms" }}>
                 <Link href="#cotizar" onClick={() => setIsMenuOpen(false)}>
                   Cotizar Ahora
                 </Link>

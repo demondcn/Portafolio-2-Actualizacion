@@ -86,16 +86,16 @@ export function Portfolio() {
   const isInstagram = items.length > 0;
 
   return (
-    <section id="trabajos" className="py-32 relative overflow-hidden bg-gradient-to-b from-background to-muted/20">
+    <section id="trabajos" className="py-20 sm:py-24 lg:py-32 relative overflow-hidden bg-gradient-to-b from-background to-muted/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-20">
           <span className="inline-block px-5 py-2 glass rounded-full text-primary text-sm font-medium mb-6 shadow-lg animate-fade-in-up">
             Portfolio
           </span>
-          <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6 text-balance tracking-tight animate-fade-in-up delay-100">
+          <h2 className="text-3xl sm:text-5xl font-bold text-foreground mb-6 text-balance tracking-tight animate-fade-in-up delay-100">
             Nuestros trabajos destacados
           </h2>
-          <p className="text-muted-foreground text-xl leading-relaxed animate-fade-in-up delay-200">
+          <p className="text-muted-foreground text-lg sm:text-xl leading-relaxed animate-fade-in-up delay-200">
             {isInstagram
               ? "Galeria sincronizada con Instagram: @bacanodnos3d."
               : "Cada proyecto es unico y lo tratamos con la misma dedicacion. Conoce algunos de nuestros trabajos mas destacados."}

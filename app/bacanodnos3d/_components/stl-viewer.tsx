@@ -1,8 +1,8 @@
 "use client"
 
 import { Suspense, useEffect, useRef, useState } from "react"
-import { Canvas, useFrame, useLoader, useThree } from "@react-three/fiber"
-import { OrbitControls, Environment, Center, Html } from "@react-three/drei"
+import { Canvas, useLoader, useThree } from "@react-three/fiber"
+import { OrbitControls, Environment, Html } from "@react-three/drei"
 import { STLLoader } from "three/examples/jsm/loaders/STLLoader.js"
 import * as THREE from "three"
 import { Loader2 } from "lucide-react"
@@ -16,7 +16,6 @@ interface STLModelProps {
 
 function STLModel({ url, color, scale, onFit }: STLModelProps) {
   const geometry = useLoader(STLLoader, url)
-  const meshRef = useRef<THREE.Mesh>(null)
   const groupRef = useRef<THREE.Group>(null)
   const [dragging, setDragging] = useState(false)
   const [fit, setFit] = useState<{
@@ -51,12 +50,6 @@ function STLModel({ url, color, scale, onFit }: STLModelProps) {
       }
     }
   }, [geometry])
-
-  useFrame(() => {
-    if (meshRef.current && !dragging) {
-      meshRef.current.rotation.y += 0
-    }
-  })
 
   const maxDim = fit?.maxDim || 1
   const normalizedScale = (3 / maxDim) * scale
@@ -97,7 +90,7 @@ function STLModel({ url, color, scale, onFit }: STLModelProps) {
       onPointerOut={onPointerUp}
       onPointerMove={onPointerMove}
     >
-      <mesh ref={meshRef} geometry={geometry} scale={normalizedScale} castShadow receiveShadow>
+      <mesh geometry={geometry} scale={normalizedScale} castShadow receiveShadow>
         <meshStandardMaterial color={color} roughness={0.3} metalness={0.2} envMapIntensity={0.8} />
       </mesh>
     </group>
@@ -181,18 +174,18 @@ export function STLViewer({ fileUrl, color, scale }: STLViewerProps) {
           position={[0, 0, 0]}
         />
       </Canvas>
-      <div className="absolute right-4 bottom-4 flex items-center gap-2">
+      <div className="absolute right-3 bottom-3 sm:right-4 sm:bottom-4 flex items-center gap-2">
         <button
           type="button"
           onClick={() => controlsRef.current?.dollyOut(1.1)}
-          className="h-10 w-10 rounded-xl bg-slate-900/70 border border-white/10 text-white text-lg font-bold hover:bg-slate-800/80 transition-colors"
+          className="h-11 w-11 sm:h-10 sm:w-10 rounded-xl bg-slate-900/70 border border-white/10 text-white text-lg font-bold hover:bg-slate-800/80 transition-colors"
         >
           -
         </button>
         <button
           type="button"
           onClick={() => controlsRef.current?.dollyIn(1.25)}
-          className="h-10 w-10 rounded-xl bg-slate-900/70 border border-white/10 text-white text-lg font-bold hover:bg-slate-800/80 transition-colors"
+          className="h-11 w-11 sm:h-10 sm:w-10 rounded-xl bg-slate-900/70 border border-white/10 text-white text-lg font-bold hover:bg-slate-800/80 transition-colors"
         >
           +
         </button>
